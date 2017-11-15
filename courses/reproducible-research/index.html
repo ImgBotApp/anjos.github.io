@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="../../theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="../../theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="../../theme/font-awesome/css/font-awesome.min.css">
+
+    <link href="../../css/custom.css" rel="stylesheet">
+
+
+
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#333">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#333">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Microsoft EDGE -->
+    <meta name="msapplication-TileColor" content="#333">
+
+<meta name="author" content="André Anjos" />
+<meta name="description" content="This is a course on Reproducible Research (RR) for research engineers working with software applications in Pattern Recognition (PR) and Machine Learning (ML). It motivates and explains con- cepts behind RR, an increasing trend in scientific publications in this niche, its implications and tools for implementing it on an individual or group levels. It is a hands-on course in the sense students will be required to create their own workflows for selected problems in ML and PR. By the end of this course, students should understand the basic concepts of reproducibility, its importance on their daily practice and how to achieve it with freely available tools and environments." />
+<meta name="keywords" content="">
+
+<meta property="og:site_name" content="André Anjos"/>
+<meta property="og:title" content="Reproducible Research for Pattern Recognition"/>
+<meta property="og:description" content="This is a course on Reproducible Research (RR) for research engineers working with software applications in Pattern Recognition (PR) and Machine Learning (ML). It motivates and explains con- cepts behind RR, an increasing trend in scientific publications in this niche, its implications and tools for implementing it on an individual or group levels. It is a hands-on course in the sense students will be required to create their own workflows for selected problems in ML and PR. By the end of this course, students should understand the basic concepts of reproducibility, its importance on their daily practice and how to achieve it with freely available tools and environments."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="../../courses/reproducible-research/"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2015-07-22 10:00:00+02:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="../../author/andre-anjos.html">
+<meta property="article:section" content="courses"/>
+<meta property="og:image" content="/images/profile_128.png">
+
+  <title>André Anjos &ndash; Reproducible Research for Pattern Recognition</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="../..">
+        <img src="/images/profile_128.png" alt="André Anjos" title="André Anjos">
+      </a>
+      <h1><a href="../..">André Anjos</a></h1>
+
+<p>Signal Processing Engineer, Ph.D.</p>
+      <nav>
+        <ul class="list">
+
+          <li><a href="/pdfs/cv.pdf">CV</a></li>
+          <li><a href="/short-bio/">Short Bio</a></li>
+          <li><a href="/publications/">Publications</a></li>
+          <li><a href="/courses/">Courses</a></li>
+          <li><a href="/software/">Software</a></li>
+          <li><a href="/videos/">Videos</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/andreranjos/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-stack-overflow" href="https://stackoverflow.com/users/712525/andré-anjos" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/anjos" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-gitlab" href="https://gitlab.idiap.ch/bob" target="_blank"><i class="fa fa-gitlab"></i></a></li>
+        <li><a class="sc-skype" href="skype:andrezito?call" target="_blank"><i class="fa fa-skype"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+
+<article class="single">
+  <header>
+      
+    <h1 id="reproducible-research">Reproducible Research for Pattern Recognition</h1>
+    <p>
+          Posted on Wed 22 July 2015 in <a href="../../courses/">courses</a>
+
+
+    </p>
+  </header>
+
+
+  <div>
+    <p>One of the key aspects of modern technological research lies on the use of
+personal computers (PCs) either for the simulation of known phenomena or for
+the evaluation of data collected from natural observations. Mashups of these
+data, organized in tables and figures are attached to textual descriptions
+leading to scientific publications. In the current practice, data sets, code
+and actionable software leading to those results are excluded upon recording
+and preservation of articles. This panorama slows down potential scientific
+development in at least two major aspects: (1) re-using ideas from different
+sources normally implies on the re-development of software leading to original
+results and (2) the reviewing process of candidate ideas is based on trust
+rather than on hard, verifiable evidence that can be thoroughly
+analyzed.</p>
+<p>In this course, I introduce the concept of <a class="reference external" href="http://reproducibleresearch.net/">Reproducible Research</a> (RR), a
+term that labels scientific work that provides not only a description of the
+effort leading to stated conclusions, but points to data, software and
+instructions that allows readers to reproduce author results locally, with all
+required details and in a very short time. The promised gains of RR are
+incredible, but it does not come without a cost: in order to boost
+reproducibility, researchers now need to (re-)organize themselves so as to
+always be doing RR. This course will walk students through tools and practical
+exercises in order to implement RR on their daily activities.</p>
+<p>Finally, I introduce students to the <cite>BEAT Platform</cite>: a web-based system for
+Reproducible Research. BEAT provides an all-in-one experience in RR: tools to
+graphically create workflows, write algorithms, run, log and search for results
+in a socially interactive way. All complexity of RR and computation is hidden
+behind an easy-to-use graphical web interface.  Experimentation designed inside
+the platform can be easily transmitted and reproduced in a matter of seconds.</p>
+<div class="section" id="topics-and-outline">
+<h2>Topics and Outline</h2>
+<p>The length of each topic will depend on student motivation and discussions. The
+minimum course time is ~10 hours. If required, the course can be given in two
+days (each with, at least, 5 hours of course time).</p>
+<ul class="simple">
+<li>Introduction and Some Programming Background<ul>
+<li>The need for reproducibility</li>
+<li>Database and protocols: how to do it</li>
+<li>Tools for RR in the wild</li>
+</ul>
+</li>
+<li>Python and <a class="reference external" href="https://www.idiap.ch/software/bob/">Bob</a><ul>
+<li>Building database packages (encoding protocols)</li>
+<li>Using Python and Bob for basic Machine Learning</li>
+<li>Putting all together</li>
+</ul>
+</li>
+<li>Going social (<a class="reference external" href="https://www.beat-eu.org/">BEAT platform</a>):<ul>
+<li>The requirement for a web-based RR tool</li>
+<li>The BEAT platform</li>
+<li>Adapting your workflow to the platform</li>
+<li>From running experiments to publication preparation using only a
+web-browser</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="course-requirements">
+<h2>Course Requirements</h2>
+<p>Participants shall understand the basics of Pattern Recognition, Machine
+Learning and programming. Knowing the Python programming language is a plus.
+Here is a list of resources which can be interesting:</p>
+<ul class="simple">
+<li>Theoretical:
+* Machine Learning Basics (e.g. use Bishop's book)</li>
+<li>Practical:
+* <a class="reference external" href="http://www.diveintopython.net/toc/index.html">Dive into Python</a> (free tutorial)
+* Numerical and Scientific Programming in Python (<a class="reference external" href="http://www.numpy.org/">numpy</a>, <a class="reference external" href="http://www.scipy.org/">scipy</a>)
+* <a class="reference external" href="https://www.idiap.ch/software/bob/">Bob</a> framework for Signal Processing, Machine Learning and Biometrics</li>
+</ul>
+</div>
+<div class="section" id="material">
+<h2>Material</h2>
+<ul class="simple">
+<li><a class="reference external" href="http://www.idiap.ch/~aanjos/courses/reproducible-research/syllabus.pdf">Syllabus</a>: essentially, a copy of the above in LaTeX</li>
+<li><a class="reference external" href="http://www.idiap.ch/~aanjos/courses/reproducible-research/slides.pdf">Slides</a>: from the last iteration of the course</li>
+</ul>
+<!-- Place your references here -->
+</div>
+
+  </div>
+  <div class="tag-cloud">
+    <p>
+    </p>
+  </div>
+
+
+
+    <div class="addthis_relatedposts_inline">
+
+
+</article>
+
+    <footer>
+<p>&copy; André Anjos 2017</p>
+    </footer>
+  </main>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-22320747-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " André Anjos ",
+  "url" : "../..",
+  "image": "/images/profile_128.png",
+  "description": "Professional Website"
+}
+</script>
+
+</body>
+</html>
